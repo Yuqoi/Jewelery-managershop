@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@../styles/loginpanel-style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.LoginController">
+   <children>
+      <Pane id="leftPanel" prefHeight="400.0" prefWidth="450.0">
+         <children>
+            <Label layoutY="166.0" prefHeight="18.0" prefWidth="450.0" text="Jewelery Shop Manager" />
+         </children></Pane>
+      <Pane id="rightPanel" layoutX="450.0" prefHeight="400.0" prefWidth="250.0">
+         <children>
+            <Button fx:id="exitBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="217.0" layoutY="14.0" minWidth="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="20.0" styleClass="operationBtns" textAlignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CLOSE" styleClass="operationIcons" />
+               </graphic>
+            </Button>
+            <Button fx:id="minBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="14.0" minWidth="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="20.0" styleClass="operationBtns" textAlignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="WINDOW_MINIMIZE" styleClass="operationIcons" />
+               </graphic>
+            </Button>
+            <TextField fx:id="loginTextPanel" layoutX="51.0" layoutY="153.0" promptText="Type here login" styleClass="textFieldPanel" />
+            <PasswordField fx:id="passwordTextPanel" layoutX="51.0" layoutY="193.0" styleClass="textFieldPanel" />
+            <Label layoutX="16.0" layoutY="158.0" text="Login" />
+            <Label layoutX="17.0" layoutY="198.0" prefHeight="15.0" prefWidth="32.0" text="Pass" />
+            <Button id="loginBtn" fx:id="loginBtn" layoutX="92.0" layoutY="258.0" mnemonicParsing="false" onAction="#loginUser" prefHeight="29.0" prefWidth="75.0" text="Login" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

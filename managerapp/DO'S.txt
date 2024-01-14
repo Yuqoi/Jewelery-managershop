@@ -1,0 +1,7 @@
+WHAT TO DO ?
+
+    1. do a login panel that connects with database on the server and checks if gotten login and password is correct:
+        1.1 the username cannot be null same like password
+
+    2. if the given data to login is valid it sends us to a admin panel to manage data from our database
+        2.1
