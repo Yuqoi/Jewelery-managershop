@@ -7,8 +7,11 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.yuqoi.managerapp.utils.DatabaseConnector;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class ManagerGui extends Application {
 
@@ -49,6 +52,7 @@ public class ManagerGui extends Application {
 
 
     public static void main(String[] args) {
+
         launch();
     }
 }
