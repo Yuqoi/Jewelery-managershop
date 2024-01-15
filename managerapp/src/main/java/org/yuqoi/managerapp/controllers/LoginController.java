@@ -1,8 +1,6 @@
 package org.yuqoi.managerapp.controllers;
 
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -10,7 +8,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import org.yuqoi.managerapp.utils.DatabaseConnector;
 import org.yuqoi.managerapp.utils.PasswordHasher;
@@ -89,6 +86,7 @@ public class LoginController implements Initializable {
                 if (queryResult.getInt(1) == 1){
                     warningText.setText("-Login Approved-");
                     warningText.setTextFill(Color.GREEN);
+
                 }else{
                     warningText.setText("-Invalid Login-");
                     warningText.setTextFill(Color.RED);

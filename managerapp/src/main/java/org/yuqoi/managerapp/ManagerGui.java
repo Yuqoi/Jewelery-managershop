@@ -26,7 +26,6 @@ public class ManagerGui extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(ManagerGui.class.getResource("views/login-panel.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
 
@@ -53,7 +52,7 @@ public class ManagerGui extends Application {
 
 
     public static void main(String[] args) {
-        System.out.println(PasswordHasher.passwordHasher("pass"));
+
         launch();
     }
 }
