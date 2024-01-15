@@ -1,7 +1,11 @@
 package org.yuqoi.managerapp.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -11,12 +15,15 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.yuqoi.managerapp.utils.DatabaseConnector;
 import org.yuqoi.managerapp.utils.PasswordHasher;
+import org.yuqoi.managerapp.utils.SceneController;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 
@@ -43,7 +50,24 @@ public class LoginController implements Initializable {
             public void handle(MouseEvent event) {
                 if (!loginTextPanel.getText().isBlank() || !passwordTextPanel.getText().isBlank()){
                     String hashedPassword = PasswordHasher.passwordHasher(passwordTextPanel.getText());
-                    validateLogin(loginTextPanel.getText(), hashedPassword);
+                    if (validateLogin(loginTextPanel.getText(), hashedPassword)){
+                        warningText.setText("-Login Approved-");
+                        warningText.setTextFill(Color.GREEN);
+
+                        // TODO: change the scene to main panel and close login panel
+
+                        // function for closing the login panel
+                        Stage stage = (Stage) loginBtn.getScene().getWindow();
+                        stage.close();
+
+                        // launch a new window
+
+
+
+                    }else {
+                        warningText.setText("-Invalid Login-");
+                        warningText.setTextFill(Color.RED);
+                    }
                 }else{
                     // if the data is null it will show us a warning
                     warningText.setText("Please enter data");
@@ -70,7 +94,7 @@ public class LoginController implements Initializable {
     }
 
     // check if the given namne and password is correct
-    public void validateLogin(String givenName, String givenPassword){
+    public boolean validateLogin(String givenName, String givenPassword){
         Connection conn = DatabaseConnector.getConnection();
 
         String verify = "SELECT count(1) FROM login WHERE name = ? AND password = ?;";
@@ -83,19 +107,15 @@ public class LoginController implements Initializable {
             ResultSet queryResult = st.executeQuery();
 
             while (queryResult.next()){
-                if (queryResult.getInt(1) == 1){
-                    warningText.setText("-Login Approved-");
-                    warningText.setTextFill(Color.GREEN);
-
-                }else{
-                    warningText.setText("-Invalid Login-");
-                    warningText.setTextFill(Color.RED);
-                }
+                return queryResult.getInt(1) == 1;
             }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return false;
+    }
 
+    public void loginUser(ActionEvent event) {
     }
 }

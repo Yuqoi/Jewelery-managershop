@@ -8,6 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/ManagerGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/ManagerGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/SceneType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/SceneType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/login-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/login-panel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/main-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/main-panel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>

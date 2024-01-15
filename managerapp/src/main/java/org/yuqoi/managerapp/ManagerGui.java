@@ -24,7 +24,7 @@ public class ManagerGui extends Application {
     double yOffset;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ManagerGui.class.getResource("views/login-panel.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("views/login-panel.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
