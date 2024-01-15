@@ -40,50 +40,21 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         loginBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-
-                String name = loginTextPanel.getText();
-                String password = passwordTextPanel.getText();
-
-                String hashedPassword = PasswordHasher.passwordHasher(password);
-
-
-                // TODO: check if the given login name is valid and is in the database if not dont give an error
-                try {
-                    Connection conn = DatabaseConnector.getConnection();
-                    String sql = "SELECT * FROM login WHERE name = ?";
-                    assert conn != null;
-                    try (PreparedStatement ps = conn.prepareStatement(sql)) {
-                        ps.setString(1, name);
-                        // execute given query
-                        ResultSet rs = ps.executeQuery();
-
-
-                        while (rs.next()) {
-                            String login = rs.getString("name");
-                            String loginPassword = rs.getString("password");
-
-                            if (login.equals(name) && loginPassword.equals(hashedPassword)) {
-                                warningText.setText("-Login Approved-");
-
-                            }
-
-                        }
-
-                        rs.close();
-                        ps.close();
-                    }
-
-
-                } catch (SQLException e) {
-                    warningText.setText("-Connection is NULL-");
-//                    throw new RuntimeException(e);
+                if (!loginTextPanel.getText().isBlank() || !passwordTextPanel.getText().isBlank()){
+                    String hashedPassword = PasswordHasher.passwordHasher(passwordTextPanel.getText());
+                    validateLogin(loginTextPanel.getText(), hashedPassword);
+                }else{
+                    // if the data is null it will show us a warning
+                    warningText.setText("Please enter data");
+                    warningText.setTextFill(Color.RED);
                 }
-
             }
         });
+
         minBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -102,7 +73,31 @@ public class LoginController implements Initializable {
     }
 
     // check if the given namne and password is correct
-    public void validateLogin(){
+    public void validateLogin(String givenName, String givenPassword){
+        Connection conn = DatabaseConnector.getConnection();
+
+        String verify = "SELECT count(1) FROM login WHERE name = ? AND password = ?;";
+
+        try {
+            PreparedStatement st = conn.prepareStatement(verify);
+            st.setString(1, givenName);
+            st.setString(2, givenPassword);
+
+            ResultSet queryResult = st.executeQuery();
+
+            while (queryResult.next()){
+                if (queryResult.getInt(1) == 1){
+                    warningText.setText("-Login Approved-");
+                    warningText.setTextFill(Color.GREEN);
+                }else{
+                    warningText.setText("-Invalid Login-");
+                    warningText.setTextFill(Color.RED);
+                }
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
