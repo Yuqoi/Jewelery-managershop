@@ -18,15 +18,12 @@ public class DatabaseConnector {
                 return conn;
             }else {
                 conn.close();
-                return null;
+
             }
         } catch (ClassNotFoundException | SQLException e) {
-
-            // TODO: do something when we didnt connect to database
-
             throw new RuntimeException(e);
-
         }
+        return null;
     }
 
 }

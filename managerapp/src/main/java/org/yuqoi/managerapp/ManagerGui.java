@@ -8,6 +8,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.yuqoi.managerapp.utils.DatabaseConnector;
+import org.yuqoi.managerapp.utils.PasswordHasher;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -52,7 +53,7 @@ public class ManagerGui extends Application {
 
 
     public static void main(String[] args) {
-
+        System.out.println(PasswordHasher.passwordHasher("pass"));
         launch();
     }
 }

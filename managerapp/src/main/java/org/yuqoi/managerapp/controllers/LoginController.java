@@ -5,9 +5,12 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import org.yuqoi.managerapp.utils.DatabaseConnector;
 import org.yuqoi.managerapp.utils.PasswordHasher;
@@ -18,6 +21,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+
+
 
 public class LoginController implements Initializable {
 
@@ -30,7 +35,7 @@ public class LoginController implements Initializable {
     // TEXTFIELDS
     public TextField loginTextPanel;
     public PasswordField passwordTextPanel;
-
+    public Label warningText;
 
 
     @Override
@@ -45,23 +50,36 @@ public class LoginController implements Initializable {
                 String hashedPassword = PasswordHasher.passwordHasher(password);
 
 
-                // TODO: Check if conn is null if yes then we cant run the app
                 // TODO: check if the given login name is valid and is in the database if not dont give an error
                 try {
                     Connection conn = DatabaseConnector.getConnection();
-                    String sql = "SELECT * FROM login WHERE name == ?";
-                    PreparedStatement ps = conn.prepareStatement(sql);
-                    ps.setString(1, name);
+                    String sql = "SELECT * FROM login WHERE name = ?";
+                    assert conn != null;
+                    try (PreparedStatement ps = conn.prepareStatement(sql)) {
+                        ps.setString(1, name);
+                        // execute given query
+                        ResultSet rs = ps.executeQuery();
 
-                    // execute given query
-                    ResultSet rs = ps.executeQuery();
 
-                    // TODO: WE HAVE TO check if the given name isn't null if yes then we cannot get any data
-                    // TODO: check if given name is in the database IF NOT then return wrong username/password alert
+                        while (rs.next()) {
+                            String login = rs.getString("name");
+                            String loginPassword = rs.getString("password");
+
+                            if (login.equals(name) && loginPassword.equals(hashedPassword)) {
+                                warningText.setText("-Login Approved-");
+
+                            }
+
+                        }
+
+                        rs.close();
+                        ps.close();
+                    }
 
 
                 } catch (SQLException e) {
-                    throw new RuntimeException(e);
+                    warningText.setText("-Connection is NULL-");
+//                    throw new RuntimeException(e);
                 }
 
             }
@@ -77,8 +95,14 @@ public class LoginController implements Initializable {
         exitBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                System.exit(1);
+                Stage stage = (Stage) exitBtn.getScene().getWindow();
+                stage.close();
             }
         });
+    }
+
+    // check if the given namne and password is correct
+    public void validateLogin(){
+
     }
 }
