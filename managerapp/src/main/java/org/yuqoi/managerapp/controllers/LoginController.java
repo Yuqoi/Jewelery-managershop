@@ -12,6 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.yuqoi.managerapp.utils.DatabaseConnector;
 import org.yuqoi.managerapp.utils.PasswordHasher;
+import org.yuqoi.managerapp.utils.ScenePaths;
 import org.yuqoi.managerapp.utils.SceneSwitcher;
 
 import java.net.URL;
@@ -54,7 +55,7 @@ public class LoginController implements Initializable {
                         // function for closing the login panel
                         Stage stage = (Stage) loginBtn.getScene().getWindow();
                         stage.close();
-                        SceneSwitcher.initStage("main-panel.fxml");
+                        SceneSwitcher.initStage(ScenePaths.MAINPANEL);
 
                         // launch a new window
 

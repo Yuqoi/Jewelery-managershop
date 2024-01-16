@@ -17,7 +17,7 @@ public class ManagerGui extends Application {
     double yOffset;
     @Override
     public void start(Stage stage) throws IOException {
-        SceneSwitcher.initStage("login-panel.fxml");
+        SceneSwitcher.initStage(ScenePaths.LOGINPANEL);
 
     }
 

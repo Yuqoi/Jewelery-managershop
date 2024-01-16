@@ -18,11 +18,9 @@ public class SceneSwitcher {
     private static double xOffset;
     private static double yOffset;
 
-    public static void initStage(String fxmlPath){
+    public static void initStage(ScenePaths fxmlPath){
         try {
-            URL url = ManagerGui.class.getResource("views/"+fxmlPath);
-
-            assert url != null;
+            URL url = ManagerGui.class.getResource(fxmlPath.getFxmlFileName());
             Parent root = FXMLLoader.load(url);
 
             Scene scene = new Scene(root);

@@ -1,8 +1,8 @@
 package org.yuqoi.managerapp.utils;
 
 public enum ScenePaths {
-    LOGINPANEL("/views/login-panel.fxml"),
-    MAINPANEL("/views/main-panel.fxml");
+    LOGINPANEL("views/login-panel.fxml"),
+    MAINPANEL("views/main-panel.fxml");
 
     private final String fxmlFileName;
 
