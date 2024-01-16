@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="470.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.InventoryController">
+   <children>
+      <TableView layoutX="33.0" layoutY="35.0" prefHeight="411.0" prefWidth="618.0">
+        <columns>
+          <TableColumn prefWidth="30.0" text="id" />
+          <TableColumn prefWidth="120.0" text="watch_name" />
+            <TableColumn prefWidth="75.0" text="brand" />
+            <TableColumn prefWidth="58.0" text="sex" />
+            <TableColumn prefWidth="92.0" text="MPN" />
+            <TableColumn prefWidth="113.0" text="Mechanism" />
+            <TableColumn prefWidth="129.0" text="price" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="678.0" layoutY="35.0" prefHeight="75.0" prefWidth="206.0" spacing="15.0">
+         <children>
+            <FontAwesomeIconView fill="#3498db" glyphName="PLUS" onMouseClicked="#getAddWatch" size="45" />
+            <FontAwesomeIconView fill="#3498db" glyphName="REFRESH" onMouseClicked="#refreshTable" size="45" />
+            <FontAwesomeIconView fill="#3498db" glyphName="FILE_ALT" onMouseClicked="#updateRow" size="45" />
+         </children></HBox>
+      <TextField layoutX="678.0" layoutY="148.0" prefHeight="25.0" prefWidth="160.0" promptText="find name" />
+      <Button layoutX="849.0" layoutY="145.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0">
+         <graphic>
+            <FontAwesomeIconView fill="#3498db" glyphName="CHECK_CIRCLE" size="\\" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

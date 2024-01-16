@@ -18,6 +18,8 @@ public class SceneSwitcher {
     private static double xOffset;
     private static double yOffset;
 
+
+    // initializes stage and sets fxml file into scene creating a new window
     public static void initStage(ScenePaths fxmlPath){
         try {
             URL url = ManagerGui.class.getResource(fxmlPath.getFxmlFileName());
@@ -51,4 +53,8 @@ public class SceneSwitcher {
     public static Stage getPrimaryStage() {
         return primaryStage;
     }
+
+    // TODO: create a scene switcher for buttons in main panel (shouldn't be that hard)
+    // https://www.youtube.com/watch?v=V9nDH2iBJSM&t=97s
+    
 }

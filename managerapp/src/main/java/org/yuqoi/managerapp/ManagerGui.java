@@ -2,6 +2,9 @@ package org.yuqoi.managerapp;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import org.yuqoi.managerapp.models.MechanismType;
+import org.yuqoi.managerapp.models.Sex;
+import org.yuqoi.managerapp.models.Watch;
 import org.yuqoi.managerapp.utils.ScenePaths;
 import org.yuqoi.managerapp.utils.SceneSwitcher;
 

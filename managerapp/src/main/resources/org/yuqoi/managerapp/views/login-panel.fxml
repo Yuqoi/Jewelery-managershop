@@ -8,7 +8,7 @@
    <children>
       <Pane id="leftPanel" prefHeight="400.0" prefWidth="450.0">
          <children>
-            <Label layoutY="166.0" prefHeight="18.0" prefWidth="450.0" text="Jewelery Shop Manager" />
+            <Label layoutY="166.0" prefHeight="18.0" prefWidth="450.0" text="Watch Shop Manager" />
          </children></Pane>
       <Pane id="rightPanel" layoutX="450.0" prefHeight="400.0" prefWidth="250.0">
          <children>
