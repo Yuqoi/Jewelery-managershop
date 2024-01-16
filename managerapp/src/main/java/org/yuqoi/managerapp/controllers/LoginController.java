@@ -2,10 +2,7 @@ package org.yuqoi.managerapp.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -15,15 +12,13 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.yuqoi.managerapp.utils.DatabaseConnector;
 import org.yuqoi.managerapp.utils.PasswordHasher;
-import org.yuqoi.managerapp.utils.SceneController;
+import org.yuqoi.managerapp.utils.SceneSwitcher;
 
-import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 
@@ -59,9 +54,9 @@ public class LoginController implements Initializable {
                         // function for closing the login panel
                         Stage stage = (Stage) loginBtn.getScene().getWindow();
                         stage.close();
+                        SceneSwitcher.initStage("main-panel.fxml");
 
                         // launch a new window
-
 
 
                     }else {

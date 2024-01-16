@@ -1,18 +1,11 @@
 package org.yuqoi.managerapp;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import org.yuqoi.managerapp.utils.DatabaseConnector;
-import org.yuqoi.managerapp.utils.PasswordHasher;
+import org.yuqoi.managerapp.utils.ScenePaths;
+import org.yuqoi.managerapp.utils.SceneSwitcher;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 public class ManagerGui extends Application {
 
@@ -24,35 +17,13 @@ public class ManagerGui extends Application {
     double yOffset;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("views/login-panel.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setResizable(false);
-        stage.initStyle(StageStyle.UNDECORATED);
+        SceneSwitcher.initStage("login-panel.fxml");
 
-        scene.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                xOffset = event.getSceneX();
-                yOffset = event.getSceneY();
-            }
-        });
-        scene.setOnMouseDragged(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                stage.setX(event.getScreenX() - xOffset);
-                stage.setY(event.getScreenY() - yOffset);
-            }
-        });
-
-
-        stage.setScene(scene);
-        stage.show();
     }
 
 
 
     public static void main(String[] args) {
-
         launch();
     }
 }

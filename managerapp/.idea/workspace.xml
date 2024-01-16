@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9b2681cb-1a83-4177-94c4-c98adee47c95" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/ManagerGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/ManagerGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/SceneType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/SceneType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/login-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/login-panel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/SceneController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/SceneType.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/main-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/main-panel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -47,6 +48,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.ManagerGui.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.managerapp [clean,install].executor&quot;: &quot;Run&quot;,
     &quot;Maven.managerapp [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.managerapp [install].executor&quot;: &quot;Run&quot;,
     &quot;Maven.managerapp [org.apache.maven.plugins:maven-install-plugin:2.4:install].executor&quot;: &quot;Run&quot;,
@@ -55,13 +57,24 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/OLEK/Desktop/jewelery managment shop/managerapp&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OLEK\Desktop\jewelery managment shop\managerapp\src\main\resources\org\yuqoi\managerapp" />
       <recent name="C:\Users\OLEK\Desktop\jewelery managment shop\managerapp\src\main\resources\org\yuqoi\managerapp\views" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.yuqoi.managerapp" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean install" />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="ManagerGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -69,7 +82,7 @@
       <module name="managerapp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.yuqoi.managerapp.*" />
+          <option name="PATTERN" value="org.yuqoi.managerapp.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,8 +99,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-corretto-21.0.1-e1d2075fd9a7-17bfb3f1" />
-        <option value="jdk-21.0.1-openjdk-21.0.1-249ae16d76d6-a618e4d4" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-e1d2075fd9a7-b4911678" />
       </set>
     </attachedChunks>
   </component>
@@ -101,5 +113,16 @@
       <updated>1705235849000</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
