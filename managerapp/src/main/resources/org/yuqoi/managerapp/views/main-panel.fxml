@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="550.0" prefWidth="900.0" stylesheets="@../styles/mainpanel-style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.MainPanelController">
+<AnchorPane prefHeight="550.0" prefWidth="900.0" stylesheets="@../styles/mainpanel-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.MainPanelController">
    <children>
       <HBox id="header" alignment="CENTER" prefHeight="80.0" prefWidth="900.0" spacing="50.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#btnInventory" styleClass="headerBtn" text="Inventory" />
-            <Button mnemonicParsing="false" onAction="#btnSales" styleClass="headerBtn" text="Sales" />
-            <Button mnemonicParsing="false" onAction="#btnInvoice" styleClass="headerBtn" text="invoice" />
-            <Button mnemonicParsing="false" onAction="#btnSettings" prefHeight="34.0" prefWidth="91.0" styleClass="headerBtn" text="Settings" />
+            <Button mnemonicParsing="false" onMouseClicked="#btnInventory" styleClass="headerBtn" text="Inventory" />
+            <Button mnemonicParsing="false" onMouseClicked="#btnSales" styleClass="headerBtn" text="Sales" />
+            <Button mnemonicParsing="false" onMouseClicked="#btnInvoice" styleClass="headerBtn" text="invoice" />
+            <Button mnemonicParsing="false" onMouseClicked="#btnSettings" prefHeight="34.0" prefWidth="91.0" styleClass="headerBtn" text="Settings" />
             <VBox prefHeight="80.0" prefWidth="343.0">
                <children>
                   <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="100.0" spacing="10.0">

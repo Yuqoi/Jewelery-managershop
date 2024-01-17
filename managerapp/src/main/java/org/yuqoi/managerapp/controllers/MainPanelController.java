@@ -2,24 +2,18 @@ package org.yuqoi.managerapp.controllers;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import org.yuqoi.managerapp.ManagerGui;
 import org.yuqoi.managerapp.utils.ScenePaths;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.Objects;
-import java.util.ResourceBundle;
 
-public class MainPanelController implements Initializable {
+public class MainPanelController {
 
 
     // all buttons in main panel
@@ -41,27 +35,44 @@ public class MainPanelController implements Initializable {
         stage.setIconified(true);
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        inventoryBtn.setOnMouseClicked(event -> {
-            try {
-                Pane pane = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource("views/inventory-panel.fxml")));
-                viewPanel.getChildren().setAll(pane);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
+    public void btnInventory(MouseEvent mouseEvent) {
+        try {
+            Pane pane = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource(ScenePaths.INVENTORYPANEL.getFxmlFileName())));
+            viewPanel.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void btnSettings(ActionEvent event) {
+    public void btnSales(MouseEvent mouseEvent) {
+        try {
+            Pane pane = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource(ScenePaths.SALESPANEL.getFxmlFileName())));
+            viewPanel.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void btnInvoice(ActionEvent event) {
+    public void btnInvoice(MouseEvent mouseEvent) {
+        try {
+            Pane pane = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource(ScenePaths.INVOICEPANEL.getFxmlFileName())));
+            viewPanel.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void btnSales(ActionEvent event) {
+    public void btnSettings(MouseEvent mouseEvent) {
+        try {
+            Pane pane = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource(ScenePaths.SETTINGSPANEL.getFxmlFileName())));
+            viewPanel.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void btnInventory(ActionEvent event) {
-    }
+
+
+
+
 }
