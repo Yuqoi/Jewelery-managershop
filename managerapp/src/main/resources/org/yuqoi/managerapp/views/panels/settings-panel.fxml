@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="470.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="470.0" prefWidth="900.0" stylesheets="@../../styles/panels/settingspanel-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="279.0" layoutY="159.0" text="settings" />
+      <VBox id="leftPanel" alignment="CENTER" layoutX="89.0" layoutY="96.0" prefHeight="279.0" prefWidth="220.0" spacing="20.0" AnchorPane.bottomAnchor="95.0" AnchorPane.topAnchor="96.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="228.0" text="Logged as : " />
+            <VBox prefHeight="87.0" prefWidth="220.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="231.0" text="Change password" />
+                  <PasswordField promptText="Type password" />
+                  <PasswordField promptText="Confirm password" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CHECK" />
+               </graphic></Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="416.0" fitWidth="338.0" layoutX="526.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/logo.png" />
+         </image></ImageView>
    </children>
 </AnchorPane>

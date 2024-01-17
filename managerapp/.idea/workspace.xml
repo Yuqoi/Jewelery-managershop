@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b2681cb-1a83-4177-94c4-c98adee47c95" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/ManagerGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/ManagerGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/windows/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/MainPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/windows/MainPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Sex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/ScenePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/ScenePaths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/loginpanel-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/windows/loginpanel-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/mainpanel-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/windows/mainpanel-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/inventory-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/inventory-panel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/invoice-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/invoice-panel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/login-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/windows/login-panel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/main-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/windows/main-panel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/sales-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/sales-panel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/settings-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/settings-panel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/inventory-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/inventory-panel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/settings-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/settings-panel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +59,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OLEK\Desktop\jewelery managment shop\managerapp\src\main\resources\org\yuqoi\managerapp\styles\windows" />
+      <recent name="C:\Users\OLEK\Desktop\jewelery managment shop\managerapp\src\main\resources\org\yuqoi\managerapp\views\panels" />
+      <recent name="C:\Users\OLEK\Desktop\jewelery managment shop\managerapp\src\main\resources\org\yuqoi\managerapp\views\windows" />
       <recent name="C:\Users\OLEK\Desktop\jewelery managment shop\managerapp\src\main\resources\org\yuqoi\managerapp" />
       <recent name="C:\Users\OLEK\Desktop\jewelery managment shop\managerapp\src\main\resources\org\yuqoi\managerapp\views" />
     </key>
