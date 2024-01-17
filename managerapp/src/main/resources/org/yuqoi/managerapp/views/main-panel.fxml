@@ -6,13 +6,12 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="900.0" stylesheets="@../styles/mainpanel-style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.MainPanelController">
    <children>
-      <Pane layoutX="142.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" />
       <HBox id="header" alignment="CENTER" prefHeight="80.0" prefWidth="900.0" spacing="50.0">
          <children>
-            <Button fx:id="inventoryBtn" mnemonicParsing="false" styleClass="headerBtn" text="Inventory" />
-            <Button fx:id="salesBtn" mnemonicParsing="false" styleClass="headerBtn" text="Sales" />
-            <Button fx:id="invoiceBtn" mnemonicParsing="false" styleClass="headerBtn" text="invoice" />
-            <Button fx:id="settingsBtn" mnemonicParsing="false" prefHeight="34.0" prefWidth="91.0" styleClass="headerBtn" text="Settings" />
+            <Button mnemonicParsing="false" onAction="#btnInventory" styleClass="headerBtn" text="Inventory" />
+            <Button mnemonicParsing="false" onAction="#btnSales" styleClass="headerBtn" text="Sales" />
+            <Button mnemonicParsing="false" onAction="#btnInvoice" styleClass="headerBtn" text="invoice" />
+            <Button mnemonicParsing="false" onAction="#btnSettings" prefHeight="34.0" prefWidth="91.0" styleClass="headerBtn" text="Settings" />
             <VBox prefHeight="80.0" prefWidth="343.0">
                <children>
                   <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="100.0" spacing="10.0">
@@ -34,6 +33,6 @@
             </VBox>
          </children>
       </HBox>
-      <Pane layoutY="80.0" prefHeight="470.0" prefWidth="900.0" />
+      <Pane fx:id="viewPanel" layoutY="80.0" prefHeight="470.0" prefWidth="900.0" />
    </children>
 </AnchorPane>

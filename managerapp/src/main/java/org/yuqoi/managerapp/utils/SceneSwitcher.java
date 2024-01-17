@@ -56,5 +56,13 @@ public class SceneSwitcher {
 
     // TODO: create a scene switcher for buttons in main panel (shouldn't be that hard)
     // https://www.youtube.com/watch?v=V9nDH2iBJSM&t=97s
-    
+
+
+    // we have to get the pane which is in mainpanel controller class and set it to the clicked button
+    // so if we click the inventory it will change to enum type of inventory
+//    public static void changePanel(Stage mainpanel, Scene  ){
+//
+//    }
+
+
 }
