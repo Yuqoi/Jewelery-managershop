@@ -1,4 +1,4 @@
-package org.yuqoi.managerapp.controllers;
+package org.yuqoi.managerapp.controllers.panels;
 
 import javafx.scene.input.MouseEvent;
 

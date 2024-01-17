@@ -17,8 +17,9 @@ module org.yuqoi.managerapp {
 
     opens org.yuqoi.managerapp to javafx.fxml;
     exports org.yuqoi.managerapp;
-    exports org.yuqoi.managerapp.controllers;
+    exports org.yuqoi.managerapp.controllers.windows;
     exports org.yuqoi.managerapp.utils;
     opens org.yuqoi.managerapp.utils to javafx.fxml;
+    exports org.yuqoi.managerapp.controllers.panels;
 
 }

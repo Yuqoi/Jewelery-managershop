@@ -1,4 +1,4 @@
-package org.yuqoi.managerapp.controllers;
+package org.yuqoi.managerapp.controllers.windows;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

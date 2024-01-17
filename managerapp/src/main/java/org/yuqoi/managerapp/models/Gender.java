@@ -1,6 +1,6 @@
 package org.yuqoi.managerapp.models;
 
-public enum Sex {
+public enum Gender {
     MALE,
     FEMALE
 }
