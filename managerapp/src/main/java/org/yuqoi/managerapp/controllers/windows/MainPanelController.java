@@ -9,6 +9,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import org.yuqoi.managerapp.ManagerGui;
 import org.yuqoi.managerapp.utils.ScenePaths;
+import org.yuqoi.managerapp.utils.SceneSwitcher;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -36,39 +37,19 @@ public class MainPanelController {
     }
 
     public void btnInventory(MouseEvent mouseEvent) {
-        try {
-            Pane pane = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource(ScenePaths.INVENTORYPANEL.getFxmlFileName())));
-            viewPanel.getChildren().setAll(pane);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        SceneSwitcher.changeScene(viewPanel, ScenePaths.INVENTORYPANEL);
     }
 
     public void btnSales(MouseEvent mouseEvent) {
-        try {
-            Pane pane = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource(ScenePaths.SALESPANEL.getFxmlFileName())));
-            viewPanel.getChildren().setAll(pane);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        SceneSwitcher.changeScene(viewPanel, ScenePaths.SALESPANEL);
     }
 
     public void btnInvoice(MouseEvent mouseEvent) {
-        try {
-            Pane pane = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource(ScenePaths.INVOICEPANEL.getFxmlFileName())));
-            viewPanel.getChildren().setAll(pane);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        SceneSwitcher.changeScene(viewPanel, ScenePaths.INVOICEPANEL);
     }
 
     public void btnSettings(MouseEvent mouseEvent) {
-        try {
-            Pane pane = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource(ScenePaths.SETTINGSPANEL.getFxmlFileName())));
-            viewPanel.getChildren().setAll(pane);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        SceneSwitcher.changeScene(viewPanel, ScenePaths.SETTINGSPANEL);
     }
 
 

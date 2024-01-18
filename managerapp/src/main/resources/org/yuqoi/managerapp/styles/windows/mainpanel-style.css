@@ -1,5 +1,6 @@
 .root{
-    -fx-font-family: "Cambria Math";
+    -fx-font-family: "Arial";
+
 }
 
 #header{
@@ -7,7 +8,7 @@
 }
 #logoText{
     -fx-alignment: center;
-    -fx-font-size: 20;
+    -fx-font-size: 26;
 }
 .headerBtn{
     -fx-font-size: 18px;

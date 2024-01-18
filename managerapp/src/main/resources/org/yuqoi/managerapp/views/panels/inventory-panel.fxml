@@ -6,22 +6,23 @@
 
 <AnchorPane prefHeight="470.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.panels.InventoryController">
    <children>
-      <TableView layoutX="33.0" layoutY="35.0" prefHeight="411.0" prefWidth="618.0">
+      <TableView fx:id="watchesTable" layoutX="33.0" layoutY="35.0" prefHeight="411.0" prefWidth="618.0">
         <columns>
-          <TableColumn editable="false" prefWidth="30.0" resizable="false" text="id" />
-          <TableColumn editable="false" prefWidth="120.0" resizable="false" text="watch_name" />
-            <TableColumn editable="false" prefWidth="75.0" resizable="false" text="brand" />
-            <TableColumn editable="false" prefWidth="58.0" resizable="false" text="gender" />
-            <TableColumn editable="false" prefWidth="92.0" resizable="false" text="MPN" />
-            <TableColumn editable="false" prefWidth="113.0" resizable="false" text="Mechanism" />
-            <TableColumn editable="false" prefWidth="129.0" resizable="false" text="price" />
+          <TableColumn fx:id="id_column" editable="false" prefWidth="30.0" resizable="false" text="id" />
+          <TableColumn fx:id="watchname_column" editable="false" prefWidth="120.0" resizable="false" text="name" />
+            <TableColumn fx:id="brand_column" editable="false" prefWidth="75.0" resizable="false" text="brand" />
+            <TableColumn fx:id="gender_column" editable="false" prefWidth="58.0" resizable="false" text="gender" />
+            <TableColumn fx:id="mpn_column" editable="false" prefWidth="92.0" resizable="false" text="mpn" />
+            <TableColumn fx:id="mechanism_column" editable="false" prefWidth="113.0" resizable="false" text="mechanism" />
+            <TableColumn fx:id="price_column" editable="false" prefWidth="129.0" resizable="false" text="price" />
         </columns>
       </TableView>
       <HBox alignment="CENTER" layoutX="678.0" layoutY="35.0" prefHeight="75.0" prefWidth="206.0" spacing="15.0">
          <children>
             <FontAwesomeIconView fill="#3498db" glyphName="PLUS" onMouseClicked="#getAddWatch" size="45" />
+            <FontAwesomeIconView fill="#3498db" glyphName="MINUS" onMouseClicked="#removeWatch" size="45" />
             <FontAwesomeIconView fill="#3498db" glyphName="REFRESH" onMouseClicked="#refreshTable" size="45" />
-            <FontAwesomeIconView fill="#3498db" glyphName="FILE_ALT" onMouseClicked="#updateRow" size="45" />
+            <FontAwesomeIconView fill="#3498db" glyphName="FILE_ALT" onMouseClicked="#updateWatch" size="45" />
          </children></HBox>
       <TextField layoutX="678.0" layoutY="148.0" prefHeight="25.0" prefWidth="160.0" promptText="find name" />
       <Button layoutX="849.0" layoutY="145.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0">

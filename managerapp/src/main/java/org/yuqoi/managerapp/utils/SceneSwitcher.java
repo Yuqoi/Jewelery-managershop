@@ -5,18 +5,27 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.yuqoi.managerapp.ManagerGui;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 
 public class SceneSwitcher {
 
     private static Stage primaryStage;
     private static double xOffset;
     private static double yOffset;
+
+    private static double xPopupset;
+    private static double yPopupset;
+    // getters
+    public static Stage getPrimaryStage() {
+        return primaryStage;
+    }
 
 
     // initializes stage and sets fxml file into scene creating a new window
@@ -50,19 +59,50 @@ public class SceneSwitcher {
             throw new RuntimeException(e);
         }
     }
-    public static Stage getPrimaryStage() {
-        return primaryStage;
+
+
+    // makes a popup fxml panel (for add panels and more)
+    public static void makePopup(ScenePaths fxmlPopupPath){
+        try {
+            Parent parent = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource(fxmlPopupPath.getFxmlFileName())));
+            Scene popupScene = new Scene(parent);
+            Stage popupStage = new Stage();
+
+            popupStage.setScene(popupScene);
+            popupStage.setResizable(false);
+            popupStage.initStyle(StageStyle.UNDECORATED);
+            popupScene.setOnMousePressed(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    xPopupset = event.getSceneX();
+                    yPopupset = event.getSceneY();
+                }
+            });
+            popupScene.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    popupStage.setX(event.getScreenX() - xPopupset);
+                    popupStage.setY(event.getScreenY() - yPopupset);
+                }
+            });
+            popupStage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
-    // TODO: create a scene switcher for buttons in main panel (shouldn't be that hard)
-    // https://www.youtube.com/watch?v=V9nDH2iBJSM&t=97s
 
 
-    // we have to get the pane which is in mainpanel controller class and set it to the clicked button
-    // so if we click the inventory it will change to enum type of inventory
-//    public static void changePanel(Stage mainpanel, Scene  ){
-//
-//    }
+    // method for changing scenes inside mainpanel
+    public static void changeScene(Pane viewPanel, ScenePaths fxmlPath){
+        try {
+            Pane pane = FXMLLoader.load(Objects.requireNonNull(ManagerGui.class.getResource(fxmlPath.getFxmlFileName())));
+            viewPanel.getChildren().setAll(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 
 }

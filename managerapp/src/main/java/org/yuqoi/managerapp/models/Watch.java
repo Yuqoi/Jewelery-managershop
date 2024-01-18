@@ -21,5 +21,44 @@ public class Watch {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Watch{" +
+                "watchId=" + watchId +
+                ", watchName='" + watchName + '\'' +
+                ", brand='" + brand + '\'' +
+                ", gender=" + gender +
+                ", mpn='" + mpn + '\'' +
+                ", mechanismType=" + mechanismType +
+                ", price=" + price +
+                '}';
+    }
 
+    public int getWatchId() {
+        return watchId;
+    }
+
+    public String getWatchName() {
+        return watchName;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public String getMpn() {
+        return mpn;
+    }
+
+    public MechanismType getMechanismType() {
+        return mechanismType;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }

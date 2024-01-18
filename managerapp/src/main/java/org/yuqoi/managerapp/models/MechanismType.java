@@ -4,11 +4,11 @@ public enum MechanismType {
     Quartz,
     Mechanical,
     Automatic,
-    Hand_Winding,
+    HandWinding,
     Kinetic,
-    Spring_Drive,
+    SpringDrive,
     Tourbillon,
     Digital,
-    Solar_Powered ,
-    Radio_Controlled
+    SolarPowered ,
+    RadioControlled
 }

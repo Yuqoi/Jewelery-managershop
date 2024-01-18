@@ -2,13 +2,19 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@../../styles/windows/loginpanel-style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.windows.LoginController">
    <children>
       <Pane id="leftPanel" prefHeight="400.0" prefWidth="450.0">
          <children>
-            <Label layoutY="166.0" prefHeight="18.0" prefWidth="450.0" text="Watch Shop Manager" />
+            <Label layoutY="48.0" prefHeight="18.0" prefWidth="450.0" text="Watch Shop Manager" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="150.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
          </children></Pane>
       <Pane id="rightPanel" layoutX="450.0" prefHeight="400.0" prefWidth="250.0">
          <children>
