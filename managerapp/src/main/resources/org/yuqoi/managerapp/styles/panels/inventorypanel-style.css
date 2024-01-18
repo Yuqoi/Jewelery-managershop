@@ -1,0 +1,23 @@
+
+
+
+
+
+/* functionalities */
+.operationBtn:hover{
+    -fx-fill: red;
+    -fx-cursor: hand;
+}
+
+Button{
+    -fx-background-color: #3498db;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+Button:hover{
+    -fx-background-color: red;
+}
+
+#watchTable{
+    -fx-cursor: hand;
+}
