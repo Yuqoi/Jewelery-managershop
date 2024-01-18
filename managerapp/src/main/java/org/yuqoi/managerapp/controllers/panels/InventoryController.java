@@ -3,6 +3,7 @@ package org.yuqoi.managerapp.controllers.panels;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -72,10 +73,8 @@ public class InventoryController implements Initializable {
     ObservableList<Watch> WatchList = FXCollections.observableArrayList();
 
 
-
     public void refreshTable(MouseEvent mouseEvent) {
         WatchList.clear();
-
         try {
             query = "SELECT * FROM watches";
             prepStatement = conn.prepareStatement(query);
@@ -103,6 +102,7 @@ public class InventoryController implements Initializable {
     }
 
     public void updateWatch(MouseEvent mouseEvent) {
+        // TODO we should get selected column it cannot be null it lanuches us a panel like add panel and we set data up
     }
 
     @Override
@@ -115,7 +115,6 @@ public class InventoryController implements Initializable {
         // make a connection to database
         conn = DatabaseConnector.getConnection();
 
-
         id_column.setCellValueFactory(new PropertyValueFactory<>("watchId"));
         watchname_column.setCellValueFactory(new PropertyValueFactory<>("watchName"));
         brand_column.setCellValueFactory(new PropertyValueFactory<>("brand"));
@@ -123,14 +122,29 @@ public class InventoryController implements Initializable {
         mpn_column.setCellValueFactory(new PropertyValueFactory<>("mpn"));
         mechanism_column.setCellValueFactory(new PropertyValueFactory<>("mechanismType"));
         price_column.setCellValueFactory(new PropertyValueFactory<>("price"));
-
-
     }
 
     public void removeWatch(MouseEvent mouseEvent) {
+        if (!watchesTable.getSelectionModel().getSelectedCells().isEmpty()){
+            Watch selectedItem = watchesTable.getSelectionModel().getSelectedItem();
+            int selectedId = selectedItem.getWatchId();
+            query = "DELETE FROM watches WHERE watch_id = ?";
+            try {
+                PreparedStatement statement = conn.prepareStatement(query);
+                statement.setInt(1, selectedId);
+                statement.executeUpdate();
+
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public void getAddWatch(MouseEvent mouseEvent) {
         SceneSwitcher.makePopup(ScenePaths.ADDPANEL);
+    }
+
+    public void findWatch(ActionEvent event) {
+        // TODO finds us a watch that is typed in, HAVE TO make event handling
     }
 }
