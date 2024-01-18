@@ -24,3 +24,9 @@ Button:hover{
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
 }
+
+#warningText{
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}

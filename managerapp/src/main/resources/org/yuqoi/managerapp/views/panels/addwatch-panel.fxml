@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" stylesheets="@../../styles/panels/addpanel-style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.panels.AddPanelController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" stylesheets="@../../styles/panels/addpanel-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.panels.AddPanelController">
    <children>
       <Label id="headerText" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="400.0" text="Enter watch details" textAlignment="CENTER" />
       <HBox alignment="CENTER" prefHeight="46.0" prefWidth="400.0" spacing="10.0">
@@ -68,7 +72,7 @@
             <TextField fx:id="addPanelPrice" alignment="CENTER" promptText="price" />
          </children>
       </HBox>
-      <HBox alignment="TOP_CENTER" prefHeight="115.0" prefWidth="400.0" spacing="25.0">
+      <HBox alignment="TOP_CENTER" prefHeight="81.0" prefWidth="400.0" spacing="25.0">
          <children>
             <Button fx:id="applyDataBtn" mnemonicParsing="false" prefHeight="45.0" prefWidth="73.0" style="-fx-background-color: #3498db; -fx-background-radius: 50;" text="Apply">
                <font>
@@ -85,5 +89,6 @@
             <Insets top="20.0" />
          </padding>
       </HBox>
+      <Label id="warningText" fx:id="warningText" prefHeight="15.0" prefWidth="400.0" />
    </children>
 </VBox>
