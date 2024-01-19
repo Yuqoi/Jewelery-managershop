@@ -9,10 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -37,15 +34,6 @@ import java.util.ResourceBundle;
 public class InventoryController implements Initializable {
 
 
-    // PANELS FOR addPanel view
-    public TextField addPanelName;
-    public TextField addPanelBrand;
-    public ComboBox addPanelGenderBox;
-    public TextField addPanelMPN;
-    public ComboBox addPanelMechanismBox;
-    public TextField addPanelPrice;
-
-
 
     // PANELS FOR Inventory view
     // main table
@@ -60,6 +48,11 @@ public class InventoryController implements Initializable {
     public TableColumn<Watch, MechanismType> mechanism_column;
     public TableColumn<Watch, Double> price_column;
 
+    // textfields
+    public TextField getFindText;
+
+    // buttons
+    public Button getFindTextBtn;
 
 
     // initialize connection and make prepared statement
@@ -103,6 +96,28 @@ public class InventoryController implements Initializable {
 
     public void updateWatch(MouseEvent mouseEvent) {
         // TODO we should get selected column it cannot be null it lanuches us a panel like add panel and we set data up
+        // Selected watch
+        if (!watchesTable.getSelectionModel().getSelectedCells().isEmpty()){
+            Watch selectedWatch = watchesTable.getSelectionModel().getSelectedItem();
+
+            try {
+                var loader = new FXMLLoader(ManagerGui.class.getResource(ScenePaths.EDITPANEL.getFxmlFileName()));
+                Parent root = loader.load();
+
+
+                EditPanelController epc = loader.getController();
+
+                // send object into controller
+                // probably we have to make another class
+
+                SceneSwitcher.makePopup(ScenePaths.EDITPANEL);
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+        }
+
     }
 
     @Override
@@ -127,12 +142,14 @@ public class InventoryController implements Initializable {
     public void removeWatch(MouseEvent mouseEvent) {
         if (!watchesTable.getSelectionModel().getSelectedCells().isEmpty()){
             Watch selectedItem = watchesTable.getSelectionModel().getSelectedItem();
+
             int selectedId = selectedItem.getWatchId();
+
             query = "DELETE FROM watches WHERE watch_id = ?";
             try {
-                PreparedStatement statement = conn.prepareStatement(query);
-                statement.setInt(1, selectedId);
-                statement.executeUpdate();
+                prepStatement = conn.prepareStatement(query);
+                prepStatement.setInt(1, selectedId);
+                prepStatement.executeUpdate();
 
             } catch (SQLException e) {
                 throw new RuntimeException(e);
@@ -143,8 +160,36 @@ public class InventoryController implements Initializable {
     public void getAddWatch(MouseEvent mouseEvent) {
         SceneSwitcher.makePopup(ScenePaths.ADDPANEL);
     }
+    public void findWatch(MouseEvent mouseEvent) {
+        // query
+        query = "SELECT * FROM watches WHERE watch_name LIKE ?";
 
-    public void findWatch(ActionEvent event) {
-        // TODO finds us a watch that is typed in, HAVE TO make event handling
+        try {
+            prepStatement= conn.prepareStatement(query);
+            prepStatement.setString(1, "%"+ getFindText.getText() + "%");
+
+            // get the results
+            resultSet = prepStatement.executeQuery();
+
+            WatchList.clear();
+
+            while (resultSet.next()){
+                Gender genderVal =  Gender.valueOf(resultSet.getString("sex"));
+                MechanismType mechanismVal =  MechanismType.valueOf(resultSet.getString("mechanism_type"));
+                int id = resultSet.getInt("watch_id");
+                String name = resultSet.getString("watch_name");
+                String brand = resultSet.getString("brand");
+                String mpn = resultSet.getString("MPN");
+                double price = resultSet.getDouble("price");
+
+                WatchList.add(new Watch(id, name, brand, genderVal, mpn, mechanismVal, price));
+                watchesTable.setItems(WatchList);
+            }
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

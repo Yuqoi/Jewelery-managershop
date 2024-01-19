@@ -58,17 +58,7 @@ public class AddPanelController implements Initializable {
                     // we have to send data to database
 
                     try {
-                        String sql = "INSERT INTO watches(watch_id, watch_name, brand, sex, MPN, mechanism_type, price) VALUES (DEFAULT, ?, ?, ?, ?, ?, ?)";
-
-                        Connection conn = DatabaseConnector.getConnection();
-                        PreparedStatement statement = conn.prepareStatement(sql);
-
-                        statement.setString(1, addPanelName.getText());
-                        statement.setString(2, addPanelBrand.getText());
-                        statement.setString(3, (String) addPanelGenderBox.getValue());
-                        statement.setString(4, addPanelMPN.getText());
-                        statement.setString(5, (String) addPanelMechanismBox.getValue());
-                        statement.setDouble(6, Double.parseDouble(addPanelPrice.getText()));
+                        PreparedStatement statement = getPreparedStatement();
 
 
                         statement.executeUpdate();
@@ -84,6 +74,21 @@ public class AddPanelController implements Initializable {
                 }
             }
         });
+    }
+
+    private PreparedStatement getPreparedStatement() throws SQLException {
+        String sql = "INSERT INTO watches(watch_id, watch_name, brand, sex, MPN, mechanism_type, price) VALUES (DEFAULT, ?, ?, ?, ?, ?, ?)";
+
+        Connection conn = DatabaseConnector.getConnection();
+        PreparedStatement statement = conn.prepareStatement(sql);
+
+        statement.setString(1, addPanelName.getText());
+        statement.setString(2, addPanelBrand.getText());
+        statement.setString(3, (String) addPanelGenderBox.getValue());
+        statement.setString(4, addPanelMPN.getText());
+        statement.setString(5, (String) addPanelMechanismBox.getValue());
+        statement.setDouble(6, Double.parseDouble(addPanelPrice.getText()));
+        return statement;
     }
 
     private boolean checkIfDouble(String str){

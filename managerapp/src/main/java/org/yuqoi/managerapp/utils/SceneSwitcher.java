@@ -92,8 +92,6 @@ public class SceneSwitcher {
 
     }
 
-
-
     // method for changing scenes inside mainpanel
     public static void changeScene(Pane viewPanel, ScenePaths fxmlPath){
         try {

@@ -8,7 +8,8 @@ public enum ScenePaths {
     INVOICEPANEL("views/panels/invoice-panel.fxml"),
     SALESPANEL("views/panels/sales-panel.fxml"),
     SETTINGSPANEL("views/panels/settings-panel.fxml"),
-    ADDPANEL("views/panels/addwatch-panel.fxml");
+    ADDPANEL("views/panels/addwatch-panel.fxml"),
+    EDITPANEL("views/panels/editwatch-panel.fxml");
 
     private final String fxmlFileName;
 

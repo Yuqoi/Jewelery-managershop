@@ -24,8 +24,8 @@
             <FontAwesomeIconView fill="#3498db" glyphName="REFRESH" onMouseClicked="#refreshTable" size="45" styleClass="operationBtn" />
             <FontAwesomeIconView fill="#3498db" glyphName="FILE_ALT" onMouseClicked="#updateWatch" size="45" styleClass="operationBtn" />
          </children></HBox>
-      <TextField layoutX="678.0" layoutY="148.0" onAction="#findWatch" prefHeight="25.0" prefWidth="160.0" promptText="find name" />
-      <Button layoutX="854.0" layoutY="148.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="27.0">
+      <TextField fx:id="getFindText" layoutX="678.0" layoutY="148.0" prefHeight="25.0" prefWidth="160.0" promptText="find name" />
+      <Button fx:id="getFindTextBtn" layoutX="854.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#findWatch" prefHeight="25.0" prefWidth="27.0">
          <graphic>
             <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="16" />
          </graphic>
