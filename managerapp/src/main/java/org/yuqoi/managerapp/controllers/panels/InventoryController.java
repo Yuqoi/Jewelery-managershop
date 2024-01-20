@@ -94,27 +94,31 @@ public class InventoryController implements Initializable {
 
     }
 
+
+
     public void updateWatch(MouseEvent mouseEvent) {
         // TODO we should get selected column it cannot be null it lanuches us a panel like add panel and we set data up
         // Selected watch
         if (!watchesTable.getSelectionModel().getSelectedCells().isEmpty()){
             Watch selectedWatch = watchesTable.getSelectionModel().getSelectedItem();
 
-            try {
-                var loader = new FXMLLoader(ManagerGui.class.getResource(ScenePaths.EDITPANEL.getFxmlFileName()));
-                Parent root = loader.load();
+                Watch data = new Watch().getInstance();
+
+                // we sent that data by getting instance
+                data.setWatchId(selectedWatch.getWatchId());
+                data.setWatchName(selectedWatch.getWatchName());
+                data.setBrand(selectedWatch.getBrand());
+                data.setGender(selectedWatch.getGender());
+                data.setMpn(selectedWatch.getMpn());
+                data.setMechanismType(selectedWatch.getMechanismType());
+                data.setPrice(selectedWatch.getPrice());
 
 
-                EditPanelController epc = loader.getController();
-
-                // send object into controller
                 // probably we have to make another class
 
                 SceneSwitcher.makePopup(ScenePaths.EDITPANEL);
 
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+
 
         }
 

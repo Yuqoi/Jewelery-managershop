@@ -2,7 +2,6 @@ package org.yuqoi.managerapp.models;
 
 public class Watch {
 
-
     private int watchId;
     private String watchName;
     private String brand;
@@ -11,6 +10,16 @@ public class Watch {
     private MechanismType mechanismType;
     private double price;
 
+
+    // instance for retrieving data
+    private static Watch instance = new Watch();
+    public Watch getInstance(){
+        return instance;
+    }
+
+
+
+    public Watch(){}
     public Watch(int watchId, String watchName, String brand, Gender gender, String mpn, MechanismType mechanismType, double price) {
         this.watchId = watchId;
         this.watchName = watchName;
@@ -40,6 +49,34 @@ public class Watch {
 
     public String getWatchName() {
         return watchName;
+    }
+
+    public void setWatchId(int watchId) {
+        this.watchId = watchId;
+    }
+
+    public void setWatchName(String watchName) {
+        this.watchName = watchName;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public void setMpn(String mpn) {
+        this.mpn = mpn;
+    }
+
+    public void setMechanismType(MechanismType mechanismType) {
+        this.mechanismType = mechanismType;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String getBrand() {

@@ -60,7 +60,6 @@ public class AddPanelController implements Initializable {
                     try {
                         PreparedStatement statement = getPreparedStatement();
 
-
                         statement.executeUpdate();
 
                         warningText.setText("Data has been sent to database");

@@ -7,11 +7,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import org.yuqoi.managerapp.models.Gender;
 import org.yuqoi.managerapp.models.MechanismType;
 import org.yuqoi.managerapp.models.Watch;
+import org.yuqoi.managerapp.utils.DatabaseConnector;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Hashtable;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,44 +40,76 @@ public class EditPanelController implements Initializable {
     // warning text
     public Label warningText;
 
-    // gotten watch
-    private Watch gottenWatch = null;
-    private String namee;
 
-
-    public void setWatch(Watch watch) {
-        gottenWatch = watch;
-
-//        gottenWatch = new Watch(watch.watchId, watch.watchName, watch.brand, watch.gender, watch.mpn, watch.mechanismType, watch.price);
-
-    }
-
-    public Watch getWatch(){
-        return gottenWatch;
-    }
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         editPanelGenderBox.setItems(FXCollections.observableArrayList("MALE", "FEMALE"));
         editPanelMechanismBox.setItems(FXCollections.observableArrayList("Quartz", "Mechanical", "Automatic", "HandWinding", "Kinetic", "SpringDrive", "Tourbillon", "Digital", "SolarPowered" , "RadioControlled"));
-        Watch newWatch = getWatch();
-        System.out.println(newWatch.toString());
-//        setWatch(gottenWatch);
 
-//        Gender gottenGender = (Gender) editPanelGenderBox.getValue();
-//        MechanismType gottenMechanismType = (MechanismType) editPanelMechanismBox.getValue();
-//
+        // retrieve data
+        Watch data = new Watch().getInstance();
 
-//
+        // set the data
+        editPanelName.setText(data.getWatchName());
+        editPanelBrand.setText(data.getBrand());
+        editPanelGenderBox.setValue(data.getGender());
+        editPanelMPN.setText(data.getMpn());
+        editPanelMechanismBox.setValue(data.getMechanismType());
+        editPanelPrice.setText(String.valueOf(data.getPrice()));
 
-//
-//        closeWindowBtn.setOnMouseClicked(event -> {
-//            ((Stage) closeWindowBtn.getScene().getWindow()).close();
-//        });
-//        applyDataBtn.setOnMouseClicked(event -> {
-////            we push into database changed values
-//        });
+        closeWindowBtn.setOnMouseClicked(event -> {
+            ((Stage) closeWindowBtn.getScene().getWindow()).close();
+        });
+        applyDataBtn.setOnMouseClicked(event -> {
+            // check if have we changed something
+            // check the columns that has been updated and execute them into data base after executing show text about progress
+            if (!(data.getWatchName().equals(editPanelName.getText()) &&
+                    data.getBrand().equals(editPanelBrand.getText()) &&
+                    data.getGender().equals(editPanelGenderBox.getValue()) &&
+                    data.getMpn().equals(editPanelMPN.getText()) &&
+                    data.getMechanismType().equals(editPanelMechanismBox.getValue()) &&
+                    data.getPrice() == Double.parseDouble(editPanelPrice.getText()))){
+
+
+                try {
+                    // get the changed data and insert it into database
+                    int id = data.getWatchId();
+                    String sql = "UPDATE watches SET watch_name = ?, brand = ?, MPN = ?, price = ? WHERE watch_id = ?";
+
+                    Connection conn = DatabaseConnector.getConnection();
+                    PreparedStatement statement = conn.prepareStatement(sql);
+                    statement.setString(1, editPanelName.getText());
+                    statement.setString(2, editPanelBrand.getText());
+//                    statement.setObject(3, (Gender) editPanelGenderBox.getValue());
+                    statement.setString(3, editPanelMPN.getText());
+//                    statement.setObject(5, (MechanismType) editPanelMechanismBox.getValue());
+                    statement.setDouble(4, Double.parseDouble(editPanelPrice.getText()));
+                    statement.setInt(5, id);
+
+                    statement.executeUpdate();
+
+                    warningText.setText("Data changed");
+                    warningText.setTextFill(Color.GREEN);
+
+                    // TODO CHANGE VALUES FOR ENUM TYPES
+
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+
+
+            }else {
+                warningText.setText("The data hasn't been changed");
+                warningText.setTextFill(Color.RED);
+            }
+
+
+
+
+
+        });
 
     }
 

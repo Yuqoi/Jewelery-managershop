@@ -7,11 +7,9 @@
     <list default="true" id="9b2681cb-1a83-4177-94c4-c98adee47c95" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/AddPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/AddPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/EditPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/EditPanelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/ScenePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/ScenePaths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/SceneSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/SceneSwitcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/editwatch-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/editwatch-panel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/inventory-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/inventory-panel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,22 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ManagerGui.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.managerapp [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.managerapp [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.managerapp [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.managerapp [org.apache.maven.plugins:maven-install-plugin:2.4:install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.managerapp [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/OLEK/Desktop/jewelery managment shop/managerapp&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ManagerGui.executor": "Run",
+    "Maven.managerapp [clean,install].executor": "Run",
+    "Maven.managerapp [clean].executor": "Run",
+    "Maven.managerapp [install].executor": "Run",
+    "Maven.managerapp [org.apache.maven.plugins:maven-install-plugin:2.4:install].executor": "Run",
+    "Maven.managerapp [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/OLEK/Desktop/jewelery managment shop/managerapp",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\OLEK\Desktop\jewelery managment shop\managerapp\src\main\resources\org\yuqoi\managerapp\styles\windows" />
