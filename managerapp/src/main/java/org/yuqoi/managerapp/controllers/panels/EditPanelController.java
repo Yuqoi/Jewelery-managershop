@@ -18,6 +18,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.SQLType;
 import java.util.Hashtable;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -73,27 +74,31 @@ public class EditPanelController implements Initializable {
                     data.getPrice() == Double.parseDouble(editPanelPrice.getText()))){
 
 
+
+
+
+
                 try {
                     // get the changed data and insert it into database
                     int id = data.getWatchId();
-                    String sql = "UPDATE watches SET watch_name = ?, brand = ?, MPN = ?, price = ? WHERE watch_id = ?";
+                    String sql = "UPDATE watches SET watch_name = ?, brand = ?, sex = ?, MPN = ?, mechanism_type = ?, price = ? WHERE watch_id = ?";
+
+
 
                     Connection conn = DatabaseConnector.getConnection();
                     PreparedStatement statement = conn.prepareStatement(sql);
                     statement.setString(1, editPanelName.getText());
                     statement.setString(2, editPanelBrand.getText());
-//                    statement.setObject(3, (Gender) editPanelGenderBox.getValue());
-                    statement.setString(3, editPanelMPN.getText());
-//                    statement.setObject(5, (MechanismType) editPanelMechanismBox.getValue());
-                    statement.setDouble(4, Double.parseDouble(editPanelPrice.getText()));
-                    statement.setInt(5, id);
+                    statement.setString(3, editPanelGenderBox.getValue().toString());
+                    statement.setString(4, editPanelMPN.getText());
+                    statement.setString(5, editPanelMechanismBox.getValue().toString());
+                    statement.setDouble(6, Double.parseDouble(editPanelPrice.getText()));
+                    statement.setInt(7, id);
 
                     statement.executeUpdate();
 
                     warningText.setText("Data changed");
                     warningText.setTextFill(Color.GREEN);
-
-                    // TODO CHANGE VALUES FOR ENUM TYPES
 
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
