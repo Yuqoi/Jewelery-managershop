@@ -1,34 +1,23 @@
 package org.yuqoi.managerapp.controllers.panels;
 
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import org.yuqoi.managerapp.ManagerGui;
-import org.yuqoi.managerapp.models.Gender;
-import org.yuqoi.managerapp.models.MechanismType;
-import org.yuqoi.managerapp.models.Watch;
+import org.yuqoi.managerapp.models.Watch.Gender;
+import org.yuqoi.managerapp.models.Watch.MechanismType;
+import org.yuqoi.managerapp.models.Watch.Watch;
 import org.yuqoi.managerapp.utils.DatabaseConnector;
 import org.yuqoi.managerapp.utils.ScenePaths;
 import org.yuqoi.managerapp.utils.SceneSwitcher;
 
-import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class InventoryController implements Initializable {

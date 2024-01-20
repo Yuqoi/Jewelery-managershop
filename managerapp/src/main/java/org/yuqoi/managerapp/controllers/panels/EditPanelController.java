@@ -1,6 +1,5 @@
 package org.yuqoi.managerapp.controllers.panels;
 
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -9,20 +8,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import org.yuqoi.managerapp.models.Gender;
-import org.yuqoi.managerapp.models.MechanismType;
-import org.yuqoi.managerapp.models.Watch;
+import org.yuqoi.managerapp.models.Watch.Watch;
 import org.yuqoi.managerapp.utils.DatabaseConnector;
 
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.SQLType;
-import java.util.Hashtable;
-import java.util.Objects;
 import java.util.ResourceBundle;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class EditPanelController implements Initializable {
 

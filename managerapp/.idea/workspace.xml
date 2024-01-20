@@ -5,7 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b2681cb-1a83-4177-94c4-c98adee47c95" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Invoice/Invoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Invoice/InvoiceSerialGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch/MechanismType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch/Watch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/2024-01-20.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/src/main/java/InvoiceGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/src/main/java/InvoiceNumberGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pdftester/src/main/resources/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/EditPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/EditPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/src/main/java/models/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/MechanismType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/src/main/java/models/MechanismType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/src/main/java/models/Watch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +65,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.ManagerGui.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.org.yuqoi.managerapp.models.Watch in managerapp.executor&quot;: &quot;Coverage&quot;,
     &quot;Maven.managerapp [clean,install].executor&quot;: &quot;Run&quot;,
     &quot;Maven.managerapp [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.managerapp [install].executor&quot;: &quot;Run&quot;,
@@ -73,7 +97,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ManagerGui">
     <configuration name="ManagerGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.yuqoi.managerapp.ManagerGui" />
       <module name="managerapp" />
@@ -87,8 +111,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="org.yuqoi.managerapp.models.Watch in managerapp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="managerapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.yuqoi.managerapp.models.Watch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.yuqoi.managerapp.models.Watch" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.org.yuqoi.managerapp.models.Watch in managerapp" />
         <item itemvalue="Application.ManagerGui" />
       </list>
     </recent_temporary>
@@ -121,5 +160,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/managerapp$org_yuqoi_managerapp_models_Watch_in_managerapp.ic" NAME="org.yuqoi.managerapp.models.Watch in managerapp Coverage Results" MODIFIED="1705755316357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.yuqoi.managerapp.models.Watch.*</FILTER>
+    </SUITE>
   </component>
 </project>

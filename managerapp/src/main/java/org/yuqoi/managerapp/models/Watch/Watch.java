@@ -1,4 +1,4 @@
-package org.yuqoi.managerapp.models;
+package org.yuqoi.managerapp.models.Watch;
 
 public class Watch {
 

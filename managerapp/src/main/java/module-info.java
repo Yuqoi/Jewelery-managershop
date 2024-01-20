@@ -12,7 +12,7 @@ module org.yuqoi.managerapp {
     requires de.jensd.fx.glyphs.commons;
     requires de.jensd.fx.glyphs.fontawesome;
     requires de.jensd.fx.glyphs.materialdesignicons;
-
+    requires PdfInvoiceCreator;
 
 
     opens org.yuqoi.managerapp to javafx.fxml;
@@ -21,5 +21,5 @@ module org.yuqoi.managerapp {
     exports org.yuqoi.managerapp.utils;
     opens org.yuqoi.managerapp.utils to javafx.fxml;
     exports org.yuqoi.managerapp.controllers.panels;
-    exports org.yuqoi.managerapp.models;
+    exports org.yuqoi.managerapp.models.Watch;
 }
