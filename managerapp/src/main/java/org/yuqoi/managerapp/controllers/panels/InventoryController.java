@@ -185,4 +185,8 @@ public class InventoryController implements Initializable {
         }
 
     }
+
+    public void createInvoice(MouseEvent mouseEvent) {
+        SceneSwitcher.makePopup(ScenePaths.INVOICEPANEL);
+    }
 }

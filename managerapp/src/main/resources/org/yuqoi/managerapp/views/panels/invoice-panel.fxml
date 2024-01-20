@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="470.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="650.0" prefWidth="400.0" stylesheets="@../../styles/panels/invoicepanel-style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.panels.InvoiceController">
    <children>
-      <Label layoutX="269.0" layoutY="144.0" prefHeight="17.0" prefWidth="154.0" text="sales" />
+      <Label id="headerLabel" layoutY="-1.0" prefHeight="50.0" prefWidth="400.0" text="Select watch to make an invoice" />
+      <TableView fx:id="invoiceTable" layoutY="49.0" prefHeight="280.0" prefWidth="400.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" editable="false" prefWidth="307.0" text="name" />
+          <TableColumn fx:id="priceColumn" editable="false" minWidth="0.0" prefWidth="92.0" text="price" />
+        </columns>
+      </TableView>
+      <VBox alignment="TOP_CENTER" layoutX="41.0" layoutY="339.0" prefHeight="200.0" prefWidth="315.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="315.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="140.0" text="Price -&gt;" />
+                  <Label fx:id="priceField" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="155.0" text="0" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="315.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="140.0" text="Selected items -&gt;" />
+                  <Label fx:id="selectedItemsField" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="155.0" text="0" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <Label id="warningText" fx:id="warningText">
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <HBox id="footerBtns" alignment="TOP_CENTER" layoutY="576.0" prefHeight="74.0" prefWidth="400.0" spacing="50.0">
+         <children>
+            <Button id="addWatchBtn" mnemonicParsing="false" onMouseClicked="#addWatchToInvoice" prefHeight="50.0" prefWidth="90.0" text="Add watch" />
+            <Button mnemonicParsing="false" onMouseClicked="#printInvoice" prefHeight="50.0" prefWidth="90.0" text="Print" />
+            <Button mnemonicParsing="false" onMouseClicked="#leaveWindow" prefHeight="50.0" prefWidth="90.0" text="Leave" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

@@ -20,6 +20,11 @@
     -fx-background-radius: 10px;
 }
 
+#welcomeText{
+    -fx-font-size: 40;
+}
+
+
 
 /* functionalities */
 
@@ -32,3 +37,4 @@
     -fx-background-color: red;
 
 }
+

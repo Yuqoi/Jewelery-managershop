@@ -21,3 +21,14 @@ Button:hover{
 #watchTable{
     -fx-cursor: hand;
 }
+
+#makeInvoiceBtn{
+    -fx-background-color: #3498db;
+    -fx-font-size: 20;
+    -fx-font-weight: 700;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+#makeInvoiceBtn:hover{
+    -fx-text-fill: red;
+}

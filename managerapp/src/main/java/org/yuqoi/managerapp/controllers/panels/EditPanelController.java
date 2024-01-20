@@ -65,12 +65,6 @@ public class EditPanelController implements Initializable {
                     data.getMpn().equals(editPanelMPN.getText()) &&
                     data.getMechanismType().equals(editPanelMechanismBox.getValue()) &&
                     data.getPrice() == Double.parseDouble(editPanelPrice.getText()))){
-
-
-
-
-
-
                 try {
                     // get the changed data and insert it into database
                     int id = data.getWatchId();

@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b2681cb-1a83-4177-94c4-c98adee47c95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Invoice/Invoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Invoice/InvoiceSerialGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch/MechanismType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch/Watch.java" afterDir="false" />
+    <list default="true" id="9b2681cb-1a83-4177-94c4-c98adee47c95" name="Changes" comment="added invoice class">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pdftester/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pdftester/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pdftester/.idea/encodings.xml" afterDir="false" />
@@ -22,13 +18,16 @@
       <change afterPath="$PROJECT_DIR$/../pdftester/src/main/java/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../pdftester/src/main/resources/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DO'S.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/EditPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/EditPanelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/src/main/java/models/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/MechanismType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/src/main/java/models/MechanismType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Watch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/src/main/java/models/Watch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InvoiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/panels/inventorypanel-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/panels/inventorypanel-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/panels/invoicepanel-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/panels/invoicepanel-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/windows/mainpanel-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/windows/mainpanel-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/inventory-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/inventory-panel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/invoice-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/invoice-panel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/windows/main-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/windows/main-panel.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +72,7 @@
     &quot;Maven.managerapp [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/OLEK/Desktop/jewelery managment shop/managerapp&quot;,
@@ -127,8 +127,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.org.yuqoi.managerapp.models.Watch in managerapp" />
         <item itemvalue="Application.ManagerGui" />
+        <item itemvalue="JUnit.org.yuqoi.managerapp.models.Watch in managerapp" />
       </list>
     </recent_temporary>
   </component>
@@ -148,6 +148,15 @@
       <option name="presentableId" value="Default" />
       <updated>1705235849000</updated>
     </task>
+    <task id="LOCAL-00001" summary="added invoice class">
+      <option name="closed" value="true" />
+      <created>1705760695845</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705760695845</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +169,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added invoice class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added invoice class" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/managerapp$org_yuqoi_managerapp_models_Watch_in_managerapp.ic" NAME="org.yuqoi.managerapp.models.Watch in managerapp Coverage Results" MODIFIED="1705755316357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
