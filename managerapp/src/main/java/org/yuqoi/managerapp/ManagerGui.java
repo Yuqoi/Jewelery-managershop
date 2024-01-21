@@ -14,11 +14,7 @@ public class ManagerGui extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         SceneSwitcher.initStage(ScenePaths.LOGINPANEL);
-
     }
-
-
-
     public static void main(String[] args) {
         launch();
     }
