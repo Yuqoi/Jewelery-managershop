@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="900.0" stylesheets="@../../styles/windows/mainpanel-style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.windows.MainPanelController">
+   <children>
+      <HBox id="header" alignment="CENTER" prefHeight="80.0" prefWidth="900.0" spacing="50.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#changeColors" onMouseClicked="#btnInventory" prefHeight="33.0" prefWidth="180.0" styleClass="headerBtn" text="Manager" />
+            <Button mnemonicParsing="false" onAction="#changeColors" onMouseClicked="#btnSales" prefHeight="33.0" prefWidth="100.0" styleClass="headerBtn" text="Sales" />
+            <Button mnemonicParsing="false" onAction="#changeColors" onMouseClicked="#btnSettings" prefHeight="34.0" prefWidth="100.0" styleClass="headerBtn" text="Settings" />
+            <VBox prefHeight="80.0" prefWidth="343.0">
+               <children>
+                  <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#minimizeWindow" styleClass="operationBtn">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="WINDOW_MINIMIZE" size="8" />
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#closeWindow" styleClass="operationBtn">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="CLOSE" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label id="logoText" prefHeight="24.0" prefWidth="348.0" text="Watch Store Manager" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Pane fx:id="viewPanel" layoutY="80.0" prefHeight="470.0" prefWidth="900.0">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="301.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <Label id="welcomeText" alignment="CENTER" layoutX="1.0" layoutY="81.0" prefHeight="15.0" prefWidth="900.0" text="Welcome !" textAlignment="CENTER" />
+         </children></Pane>
+   </children>
+</AnchorPane>

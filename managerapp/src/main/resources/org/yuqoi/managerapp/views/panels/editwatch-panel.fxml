@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" stylesheets="@../../styles/panels/editpanel-style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yuqoi.managerapp.controllers.panels.EditPanelController">
+   <children>
+      <Label id="headerText" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="400.0" text="Change watch details" textAlignment="CENTER" />
+      <HBox alignment="CENTER" prefHeight="46.0" prefWidth="400.0" spacing="10.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="130.0" text="Watch name">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="editPanelName" alignment="CENTER" promptText="Name" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="46.0" prefWidth="400.0" spacing="10.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="130.0" text="Brand">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="editPanelBrand" alignment="CENTER" promptText="Brand" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="46.0" prefWidth="400.0" spacing="10.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="131.0" text="Gender">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="editPanelGenderBox" prefHeight="30.0" prefWidth="200.0" visibleRowCount="2" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="46.0" prefWidth="400.0" spacing="10.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="130.0" text="MPN Code">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="editPanelMPN" alignment="CENTER" promptText="mpn code" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="46.0" prefWidth="400.0" spacing="10.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="130.0" text="Mechanism type">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="editPanelMechanismBox" prefHeight="30.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="46.0" prefWidth="400.0" spacing="10.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="130.0" text="Price">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="editPanelPrice" alignment="CENTER" promptText="price" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="81.0" prefWidth="400.0" spacing="25.0">
+         <children>
+            <Button fx:id="applyDataBtn" mnemonicParsing="false" prefHeight="45.0" prefWidth="73.0" style="-fx-background-color: #3498db; -fx-background-radius: 50;" text="Apply">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeWindowBtn" mnemonicParsing="false" prefHeight="45.0" prefWidth="50.0" style="-fx-background-color: #3498db; -fx-background-radius: 50;" text="X">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <Label id="warningText" fx:id="warningText" prefHeight="15.0" prefWidth="400.0" />
+   </children>
+</VBox>
