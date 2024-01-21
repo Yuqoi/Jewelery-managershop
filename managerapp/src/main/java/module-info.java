@@ -26,4 +26,5 @@ module org.yuqoi.managerapp {
     exports org.yuqoi.managerapp.models.Watch;
     exports org.yuqoi.managerapp.utils.scenemanager;
     opens org.yuqoi.managerapp.utils.scenemanager to javafx.fxml;
+    exports org.yuqoi.managerapp.models.Invoice;
 }

@@ -47,9 +47,6 @@ public class AddPanelController implements Initializable {
             ((Stage) closeWindowBtn.getScene().getWindow()).close();
         });
         applyDataBtn.setOnMouseClicked(event -> {
-            // we have to check if the given data is correct and isnt null
-            // if it is good we send data to database
-            // if its not then me send a warning text that fields are incorrect
             if (addPanelName.getText().isBlank() || addPanelBrand.getText().isBlank() || addPanelGenderBox.getValue() == null || addPanelMPN.getText().isEmpty() || addPanelMechanismBox.getValue() == null || addPanelPrice.getText().isEmpty()){
                 warningText.setText("The given data is null or blank");
                 warningText.setTextFill(Color.RED);

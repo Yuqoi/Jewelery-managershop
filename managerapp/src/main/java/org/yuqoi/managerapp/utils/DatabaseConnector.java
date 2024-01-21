@@ -14,11 +14,9 @@ public class DatabaseConnector {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
             if (conn.isValid(5)){
-                System.out.println("dzialadsdsds");
                 return conn;
             }else {
                 conn.close();
-
             }
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
