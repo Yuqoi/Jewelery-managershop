@@ -37,6 +37,7 @@ public class LoginController implements Initializable {
     public PasswordField passwordTextPanel;
     public Label warningText;
 
+    public static String name;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -103,6 +104,7 @@ public class LoginController implements Initializable {
             ResultSet queryResult = st.executeQuery();
 
             while (queryResult.next()){
+                name = givenName;
                 return queryResult.getInt(1) == 1;
             }
 

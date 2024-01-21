@@ -34,7 +34,6 @@ public class SalesController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setTable();
-        System.out.println("set table minelo");
         setData();
     }
 
