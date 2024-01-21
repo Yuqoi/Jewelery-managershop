@@ -3,19 +3,21 @@ package org.yuqoi.managerapp.controllers.panels;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.yuqoi.managerapp.models.Invoice.Invoice;
 import org.yuqoi.managerapp.models.Watch.Gender;
 import org.yuqoi.managerapp.models.Watch.MechanismType;
 import org.yuqoi.managerapp.models.Watch.Watch;
 import org.yuqoi.managerapp.utils.DatabaseConnector;
+import org.yuqoi.managerapp.utils.pdfgenerator.GeneratePdf;
+import org.yuqoi.managerapp.utils.pdfgenerator.PdfSerialGenerator;
 
+import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -39,6 +41,10 @@ public class InvoiceController implements Initializable {
     public Label selectedItemsField;
     public Label warningText;
 
+    // cutomer textfields
+    public TextField customerName;
+    public TextField customerAddress;
+    public TextField customerCountry;
 
 
     // list
@@ -68,9 +74,23 @@ public class InvoiceController implements Initializable {
 
 
     // prints invoice from selected items cannot be null
-    public void printInvoice(MouseEvent mouseEvent) {
+    public void printInvoice(MouseEvent mouseEvent) throws MalformedURLException, FileNotFoundException {
         if (!selectedToInvoice.isEmpty()){
-            System.out.println(selectedToInvoice.toString());
+            String customerTextName = customerName.getText();
+            String customerTextAddress = customerAddress.getText();
+            String customerTextCountry = customerCountry.getText();
+            if (!customerTextName.isEmpty() && !customerTextAddress.isEmpty() && !customerTextCountry.isEmpty()){
+                new GeneratePdf(selectedToInvoice, PdfSerialGenerator.generateInvoiceNumber(), customerTextName, customerTextAddress, customerTextCountry);
+
+                warningText.setText("Created Invoice");
+                warningText.setTextFill(Color.GREEN);
+            }else{
+                warningText.setText("Fields are null");
+                warningText.setTextFill(Color.RED);
+            }
+
+
+
         }else{
             warningText.setTextFill(Color.RED);
             warningText.setText("Select items!");

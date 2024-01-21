@@ -1,4 +1,4 @@
-package org.yuqoi.managerapp.utils;
+package org.yuqoi.managerapp.utils.scenemanager;
 
 public enum ScenePaths {
     // all fxml files

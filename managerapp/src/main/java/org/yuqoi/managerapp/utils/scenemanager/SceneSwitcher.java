@@ -1,4 +1,4 @@
-package org.yuqoi.managerapp.utils;
+package org.yuqoi.managerapp.utils.scenemanager;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;

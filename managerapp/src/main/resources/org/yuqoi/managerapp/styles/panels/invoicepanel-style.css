@@ -12,7 +12,8 @@ VBox{
 }
 
 #warningText{
-    -fx-font-size: 24;
+    -fx-font-size: 20;
+    -fx-alignment: center;
 }
 #footerBtns Button{
     -fx-background-color: #3498db;

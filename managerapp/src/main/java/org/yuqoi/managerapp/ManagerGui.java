@@ -2,8 +2,8 @@ package org.yuqoi.managerapp;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.yuqoi.managerapp.utils.ScenePaths;
-import org.yuqoi.managerapp.utils.SceneSwitcher;
+import org.yuqoi.managerapp.utils.scenemanager.ScenePaths;
+import org.yuqoi.managerapp.utils.scenemanager.SceneSwitcher;
 
 import java.io.IOException;
 

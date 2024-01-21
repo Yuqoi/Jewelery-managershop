@@ -12,7 +12,9 @@ module org.yuqoi.managerapp {
     requires de.jensd.fx.glyphs.commons;
     requires de.jensd.fx.glyphs.fontawesome;
     requires de.jensd.fx.glyphs.materialdesignicons;
-    requires PdfInvoiceCreator;
+    requires layout;
+    requires kernel;
+    requires io;
 
 
     opens org.yuqoi.managerapp to javafx.fxml;
@@ -22,4 +24,6 @@ module org.yuqoi.managerapp {
     opens org.yuqoi.managerapp.utils to javafx.fxml;
     exports org.yuqoi.managerapp.controllers.panels;
     exports org.yuqoi.managerapp.models.Watch;
+    exports org.yuqoi.managerapp.utils.scenemanager;
+    opens org.yuqoi.managerapp.utils.scenemanager to javafx.fxml;
 }

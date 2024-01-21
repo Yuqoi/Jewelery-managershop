@@ -10,8 +10,8 @@ import org.yuqoi.managerapp.models.Watch.Gender;
 import org.yuqoi.managerapp.models.Watch.MechanismType;
 import org.yuqoi.managerapp.models.Watch.Watch;
 import org.yuqoi.managerapp.utils.DatabaseConnector;
-import org.yuqoi.managerapp.utils.ScenePaths;
-import org.yuqoi.managerapp.utils.SceneSwitcher;
+import org.yuqoi.managerapp.utils.scenemanager.ScenePaths;
+import org.yuqoi.managerapp.utils.scenemanager.SceneSwitcher;
 
 import java.net.URL;
 import java.sql.Connection;

@@ -2,20 +2,12 @@ package org.yuqoi.managerapp.controllers.windows;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import org.yuqoi.managerapp.ManagerGui;
-import org.yuqoi.managerapp.utils.ScenePaths;
-import org.yuqoi.managerapp.utils.SceneSwitcher;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.Objects;
-import java.util.ResourceBundle;
+import org.yuqoi.managerapp.utils.scenemanager.ScenePaths;
+import org.yuqoi.managerapp.utils.scenemanager.SceneSwitcher;
 
 public class MainPanelController {
 
