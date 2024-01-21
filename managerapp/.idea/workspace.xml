@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b2681cb-1a83-4177-94c4-c98adee47c95" name="Changes" comment="added invoice class">
-      <change afterPath="$PROJECT_DIR$/../pdftester/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/ManagerGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/ManagerGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InventoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/panels/InvoiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/windows/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/windows/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/windows/MainPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/controllers/windows/MainPanelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Invoice/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Invoice/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/models/Invoice/InvoiceSerialGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/ScenePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/scenemanager/ScenePaths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/SceneSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/yuqoi/managerapp/utils/scenemanager/SceneSwitcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/panels/invoicepanel-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/styles/panels/invoicepanel-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/invoice-panel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/yuqoi/managerapp/views/panels/invoice-panel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pdftester/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pdftester/src/main/java/InvoiceGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pdftester/src/main/java/InvoiceNumberGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/src/main/java/pdfmaker/InvoiceNumberGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pdftester/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pdftester/src/main/resources/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/src/main/resources/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pdftester/src/main/java/pdfmaker/InvoiceNumberGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftester/src/main/java/pdfmaker/InvoiceNumberGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

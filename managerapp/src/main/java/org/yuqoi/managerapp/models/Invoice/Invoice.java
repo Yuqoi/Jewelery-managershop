@@ -1,22 +1,8 @@
 package org.yuqoi.managerapp.models.Invoice;
 
 
-import org.yuqoi.managerapp.models.Watch.Watch;
-import org.yuqoi.managerapp.utils.pdfgenerator.GeneratePdf;
-import org.yuqoi.managerapp.utils.pdfgenerator.PdfSerialGenerator;
-
-import java.io.FileNotFoundException;
-import java.net.MalformedURLException;
-import java.nio.file.Path;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Invoice {
 
+//SELECT w.watch_name, iw.invoice_id, i.total_amount FROM watches AS w JOIN invoice_watch AS iw ON w.watch_id = iw.watch_id JOIN invoice AS i ON iw.invoice_id = i.invoice_id;
 
-    public Invoice(List<Watch> selectedWatches,String customerName, String customerAddress, String customerCountry) throws MalformedURLException, FileNotFoundException {
-        GeneratePdf gpdf = new GeneratePdf(selectedWatches, PdfSerialGenerator.generateInvoiceNumber(), customerName, customerAddress, customerCountry);
-    }
 }
